@@ -1,0 +1,9 @@
+Django>=5.0,<6.0
+djangorestframework>=3.15
+psycopg2-binary>=2.9
+
+# JWT 認証を使う場合
+djangorestframework-simplejwt>=5.3
+
+# PostgreSQL の全文検索/トリグラム検索を使う場合
+django.contrib.postgres
