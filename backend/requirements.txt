@@ -7,3 +7,6 @@ djangorestframework-simplejwt>=5.3
 
 # PostgreSQL の全文検索/トリグラム検索を使う場合
 django.contrib.postgres
+
+# CORS ヘッダ対応
+django-cors-headers>=4.0

@@ -43,10 +43,13 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework_simplejwt',
+    'corsheaders',
 
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -141,3 +144,11 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     )
 }
+
+# 本番では特定オリジンだけ許可する
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+
+# Cookie を送る場合に必要
+CORS_ALLOW_CREDENTIALS = True
